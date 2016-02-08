@@ -31,7 +31,6 @@ define jenkins::plugin(
   $group           = undef,
   $create_user     = true,
 ) {
-  include ::jenkins
 
   validate_bool($manage_config)
   validate_bool($enabled)
