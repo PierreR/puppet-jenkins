@@ -166,6 +166,12 @@ define jenkins::plugin(
       $checksum = undef
     }
 
+    # fixing the scope issue with ::jenkins::proxy::url
+    # Might not be the best solution
+    # Waiting for puppet-jenkins to anwser
+    # see https://github.com/jenkinsci/puppet-jenkins/issues/732
+    include jenkins::proxy
+
     archive { $plugin:
       source          => $download_url,
       path            => "${::jenkins::plugin_dir}/${plugin}",
