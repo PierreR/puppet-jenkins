@@ -122,7 +122,7 @@ class jenkins::slave (
   String $slave_user                      = 'jenkins-slave',
   Optional[String] $slave_groups          = undef,
   Optional[Integer] $slave_uid            = undef,
-  Stdlib::Absolutepath $slave_home        = '/home/jenkins-slave',
+  $slave_home        = '/home/jenkins-slave',
   Enum['normal', 'exclusive'] $slave_mode = 'normal',
   Boolean $disable_ssl_verification       = false,
   Boolean $disable_clients_unique_id      = false,

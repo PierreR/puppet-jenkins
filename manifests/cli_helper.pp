@@ -10,7 +10,7 @@
 #   directly
 #
 class jenkins::cli_helper (
-  Optional[Stdlib::Absolutepath] $ssh_keyfile = $::jenkins::cli_ssh_keyfile,
+  $ssh_keyfile = $::jenkins::cli_ssh_keyfile,
 ) {
   include ::jenkins
   include ::jenkins::cli
