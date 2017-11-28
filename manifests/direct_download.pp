@@ -26,7 +26,6 @@ class jenkins::direct_download {
     archive { $package_file:
       source       => $jenkins::direct_download,
       path         => $local_file,
-      proxy_server => $::jenkins::proxy::url,
       cleanup      => false,
       extract      => false,
       before       => Package[$::jenkins::package_name],

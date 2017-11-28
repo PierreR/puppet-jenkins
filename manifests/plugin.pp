@@ -173,7 +173,6 @@ define jenkins::plugin(
       checksum_verify => $checksum_verify,
       checksum        => $checksum,
       checksum_type   => $checksum_type,
-      proxy_server    => $::jenkins::proxy::url,
       cleanup         => false,
       extract         => false,
       require         => File[$::jenkins::plugin_dir],
